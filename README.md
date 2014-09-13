@@ -6,6 +6,12 @@ Binary Downloads: https://github.com/AlliterativeAlice/SpiralBoss/releases
 
 The SpiralBoss SDK is a Java SDK for querying the [Yahoo! BOSS Search API](https://developer.yahoo.com/boss/search/)
 
-A simple example of using the SpiralBoss SDK is as follows:
-
-(Incomplete)
+```java
+String consumerKey = "key";
+String consumerSecret = "secret";
+		
+BossContext ctx = new BossContext(consumerKey, consumerSecret);
+		
+WebSearchResponse webResponse = ctx.searchWeb("test");
+System.out.println(webResponse.Results.get(0).Title);
+```
